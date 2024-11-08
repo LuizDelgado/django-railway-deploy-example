@@ -74,7 +74,7 @@ WSGI_APPLICATION = 'controller.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-#Sqlite3
+# Sqlite3
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'controller.wsgi.application'
 #     }
 # }
 
-#PostGresql
+#Mysql
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
