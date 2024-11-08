@@ -1,4 +1,6 @@
 import os
+import pymysql
+pymysql.install_as_MySQLdb()
 """
 Django settings for controller project.
 
@@ -75,24 +77,24 @@ WSGI_APPLICATION = 'controller.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 # Sqlite3
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
-#Mysql
 # DATABASES = {
 #     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': os.environ["DBNAME"],
-#         'USER': os.environ["DBUSER"],
-#         'PASSWORD': os.environ["DBPASSWORD"],
-#         'HOST': os.environ["DBHOST"],
-#         'PORT': os.environ["DBPORT"],
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+
+#Mysql
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': os.environ["DBNAME"],
+        'USER': os.environ["DBUSER"],
+        'PASSWORD': os.environ["DBPASSWORD"],
+        'HOST': os.environ["DBHOST"],
+        'PORT': os.environ["DBPORT"],
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
