@@ -1,9 +1,0 @@
-{
-    "$schema": "https://railway.app/railway.schema.json",
-    "build": {
-        "builder": "NIXPACKS"
-    },
-    "deploy": {
-        "startCommand": "export DJANGO_SUPERUSER_USERNAME=admin && export DJANGO_SUPERUSER_EMAIL=admin@example.com && export DJANGO_SUPERUSER_PASSWORD=yourpassword@#! && python manage.py migrate && python manage.py collectstatic --noinput && python manage.py createsuperuser --noinput || true && gunicorn mysite.wsgi"
-    }
-}
